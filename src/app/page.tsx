@@ -524,10 +524,8 @@ export default function FunilCroche() {
     
     console.log('Sending to backend:', payload)
     
-    const leadId = 'lead_' + Date.now()
-    const checkoutUrl = `https://checkout.example.com?lead_id=${leadId}&utm=croche_quiz&price=37`
-    
-    alert(`Redirecionando para checkout: ${checkoutUrl}`)
+    // Redirect to the actual checkout URL for R$ 37
+    window.open('https://pay.cakto.com.br/345cdyh_594870', '_blank')
   }
 
   const handleDiscountCheckout = async () => {
@@ -543,10 +541,8 @@ export default function FunilCroche() {
     
     console.log('Sending to backend with discount:', payload)
     
-    const leadId = 'lead_' + Date.now()
-    const checkoutUrl = `https://checkout.example.com?lead_id=${leadId}&utm=croche_quiz_discount&price=19.90`
-    
-    alert(`Redirecionando para checkout com desconto: ${checkoutUrl}`)
+    // Redirect to the actual checkout URL for R$ 19,90
+    window.open('https://pay.cakto.com.br/s7eowev', '_blank')
     setShowDiscountPopup(false)
   }
 
